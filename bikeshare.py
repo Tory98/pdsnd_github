@@ -195,6 +195,9 @@ def main():
         if restart.lower() != 'yes':
             break
 
-
-main()
+start_program = input('Would you like to learn about bikeshare data? (y/n)').lower()
+if start_program == 'y' OR start_program=='yes':
+    main()
+else:
+    print('You chose ' + start_program+ ". Have a great day!")
     
