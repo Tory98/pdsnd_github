@@ -58,6 +58,7 @@ def load_data(city, month_choice, day_choice):
     Returns:
         df - Pandas DataFrame containing city data filtered by city, month and day
     """
+    #Buld the dataframe by picking the right city or merging the datasets if user chose "all"
     df = pd.DataFrame()
     if city != 'all':
         path = CITY_DATA.get(city)
