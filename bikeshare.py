@@ -58,6 +58,7 @@ def load_data(city, month_choice, day_choice):
     Returns:
         df - Pandas DataFrame containing city data filtered by city, month and day
     """
+    #Buld the dataframe by picking the right city or merging the datasets if user chose "all"
     df = pd.DataFrame()
     if city != 'all':
         path = CITY_DATA.get(city)
@@ -194,6 +195,12 @@ def main():
         if restart.lower() != 'yes':
             break
 
+while True:
+    start_program = input('Would you like to learn about bikeshare data? (y/n)')
 
-main()
+    if start_program == 'y' or start_program=='yes':
+        main()
+        break
+    else:
+        print('You chose ' + start_program+ ". Have a great day!")
     
